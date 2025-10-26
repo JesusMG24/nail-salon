@@ -13,7 +13,8 @@ export default function Hero() {
           💅 Bienvenido a Serenity Nails
         </h1>
         <p className="text-lg md:text-2xl text-rose-400 mb-8">
-          Café fresco, pasteles deliciosos y un lugar acogedor en Mérida
+          Transforma tus uñas con arte, color y cuidado profesional en Serenity
+          Nails
         </p>
         <a
           href="#servicios"
