@@ -13,8 +13,8 @@ export default function Auth() {
 
     const endpoint =
       auth === "isLogin"
-        ? `https://backend-production-909e.up.railway.app/auth/login`
-        : `https://backend-production-909e.up.railway.app/auth/register`;
+        ? `https://backend-production-909e.up.railway.app/api/auth/login`
+        : `https://backend-production-909e.up.railway.app/api/auth/register`;
     try {
       const res = await fetch(endpoint, {
         method: "POST",
