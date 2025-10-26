@@ -21,8 +21,8 @@ export default function Header() {
           <a href="#inicio" className="hover:text-yellow-700 transition">
             Inicio
           </a>
-          <a href="#menu" className="hover:text-yellow-700 transition">
-            Menú
+          <a href="#servicios" className="hover:text-yellow-700 transition">
+            Servicios
           </a>
           <a href="#ubicacion" className="hover:text-yellow-700 transition">
             Ubicación
