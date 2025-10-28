@@ -8,13 +8,15 @@ export default function Auth() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const endpoint =
       auth === "isLogin"
-        ? `https://backend-production-909e.up.railway.app/api/auth/login`
-        : `https://backend-production-909e.up.railway.app/api/auth/register`;
+        ? `${API_URL}/api/auth/login`
+        : `${API_URL}/api/auth/register`;
     try {
       const res = await fetch(endpoint, {
         method: "POST",
