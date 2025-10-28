@@ -1,15 +1,14 @@
-FROM node:24 AS builder
+FROM node:24
+
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install
+RUN npm install --omit=dev
 
 COPY . .
+
 RUN npm run build
 
-FROM node:24-slim
-WORKDIR /app
-COPY --from=builder /app ./
-RUN npm install --omit=dev
-EXPOSE 4000
-CMD ["npm", "start"]
+EXPOSE 3000
+
+CMD ["sh", "-c", "next start -p $PORT"]
