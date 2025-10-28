@@ -6,8 +6,7 @@
     "dev": "next dev -p 4000",
     "build": "next build",
     "start": "next start -p 4000",
-    "lint": "eslint",
-    "postbuild": "netlify-next"
+    "lint": "eslint"
   },
   "dependencies": {
     "@netlify/next": "^1.4.9",
