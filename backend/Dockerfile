@@ -8,4 +8,6 @@ COPY . .
 
 EXPOSE 3000
 
+VOLUME ["/app/uploads"]
+
 CMD ["npm", "run", "dev"]
