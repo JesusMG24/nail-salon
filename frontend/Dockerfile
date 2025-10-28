@@ -1,14 +1,11 @@
 FROM node:24
-
 WORKDIR /app
 
 COPY package*.json ./
-RUN npm install --omit=dev
+RUN npm install
 
 COPY . .
 
-RUN npm run build
+EXPOSE 4000
 
-EXPOSE 3000
-
-CMD ["sh", "-c", "next start -p $PORT"]
+CMD ["npm", "run", "dev"]
