@@ -6,6 +6,7 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
+RUN echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL"
 RUN npm run build
 
 # --- Production Stage ---
