@@ -10,9 +10,13 @@ dotenv.config();
 
 const app = express();
 
+const allowedOrigins = (process.env.CORS_ORIGINS || "http://localhost:4000")
+  .split(",")
+  .map(origin => origin.trim());
+
 app.use(
   cors({
-    origin: process.env.URL || "http://localhost:4000",
+    origin: allowedOrigins,
     credentials: true,
   })
 );
