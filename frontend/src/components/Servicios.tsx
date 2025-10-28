@@ -322,7 +322,7 @@ export default function Servicios() {
                 {product.title}
               </h3>
               <p className="text-gray-700">{product.content}</p>
-              <p className="text-gray-700 font-medium">${product.price} MXN</p>
+              <p className="text-gray-700 font-medium">{product.price} MXN</p>
               <p className="text-gray-700">
                 Tiempo aproximado: {product.duration} minutos
               </p>
